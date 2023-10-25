@@ -24,6 +24,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .app * {

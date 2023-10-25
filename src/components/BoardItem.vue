@@ -1,6 +1,6 @@
 <template>
     <div class="item" :class="{'selected': selected, 'closed': closed}">
-        {{ icon ? icon : ''}}
+        <i v-if="icon" class="icon" :class="'icon-' + icon"></i>
     </div>
 </template>
 
@@ -31,6 +31,8 @@ export default {
     width: 50px;
     height: 50px;
     border: 1px solid #2c3e50;
+
+    position: relative;
 }
 
 .item.selected {
@@ -39,5 +41,35 @@ export default {
 
 .item.closed {
     background-color: #00ff6622;
+}
+
+.icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.icon-1,
+.icon-2,
+.icon-3 {
+    background: url('../assets/icons.png');
+    background-size: 150px 150px;
+}
+
+.icon-1 {
+    background-position: 0 0;
+}
+
+.icon-2 {
+    background-position: 50px 0;
+}
+
+.icon-3 {
+    background-position: 100px 0;
 }
 </style>
